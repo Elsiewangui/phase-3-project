@@ -110,11 +110,11 @@ Purpose: Displays the main menu options for managing the system and handles user
 
 Workflow:
 
- -Enters an infinite loop, presenting options to manage cars, customers, sales, or exit
+ -enters an infinite loop, presenting options to manage cars, customers, sales, or exit
 
- -Captures user input and directs to the appropriate submenu function based on the choice
+ -captures user input and directs to the appropriate submenu function based on the choice
 
- -Validates input, displaying an error message for invalid selections
+ -validates input, displaying an error message for invalid selections
 
 **manage_cars_menu()**
 
@@ -122,11 +122,11 @@ Purpose: Displays options for managing cars and handles user input for car-relat
 
 Workflow:
 
- -Similar to main_menu, it presents options for adding, viewing, updating, or deleting cars
+ -similar to main_menu, it presents options for adding, viewing, updating, or deleting cars
 
- -Calls the appropriate function based on user choice
+ -calls the appropriate function based on user choice
 
- -Returns to the main menu when the user selects to go back.
+ -returns to the main menu when the user selects to go back.
 
 **add_new_car()**
 
@@ -134,13 +134,13 @@ Purpose: Collects information to add a new car to the database.
 
 Workflow:
 
- -Prompts the user for car details (make, model, year, price)
+ -prompts the user for car details (make, model, year, price)
 
- -Retrieves a new session and creates a Car instance with the provided details
+ -retrieves a new session and creates a Car instance with the provided details
 
- -Adds the new car to the session, commits the transaction, and closes the session
+ -adds the new car to the session, commits the transaction, and closes the session
 
- -Displays a confirmation message upon success.
+ -displays a confirmation message upon success.
 
 **update_car_info()**
 
@@ -148,13 +148,13 @@ Purpose: Allows users to update the details of an existing car.
 
 Workflow:
 
- -Prompts for the car ID to update and retrieves the corresponding car
+ -prompts for the car ID to update and retrieves the corresponding car
 
- -Asks for new details for make, model, year, and price, allowing blank entries to keep current values
+ -asks for new details for make, model, year, and price, allowing blank entries to keep current values
 
- -Updates the car details if provided and commits changes to the database.
+ -updates the car details if provided and commits changes to the database.
 
- -Displays success or error messages based on the outcome
+ -displays success or error messages based on the outcome
 
 **record_sale()**
 
@@ -164,13 +164,13 @@ Workflow:
 
  -Prompts for customer ID, car ID, and sale date.
 
- -Validates the sale date format and checks if the customer and car exist.
+ -validates the sale date format and checks if the customer and car exist.(YEAR-MONTH-DATE)
 
- -If the car is sold, displays a warning message and exits.
+ -if the car is sold, displays a warning message and exits.
 
- -Creates a new Sale instance and updates the car's status to sold.
+ -creates a new Sale record and updates the car's status to sold on the cars table is_sold column.
 
- -Commits the transaction and confirms the sale.
+ -commits the transaction and confirms the sale.
 
 **view_all_sales()**
 
@@ -186,11 +186,11 @@ Workflow:
 
 **update_customer_info()**
 
-Purpose: Allows users to update the details of an existing customer.
+Purpose: allows users to update the details of an existing customer.
 
 Workflow:
 
- -Prompts for the customer ID to update and retrieves the corresponding customer
+ -prompts for the customer ID to update and retrieves the corresponding customer
 
  -Asks for new details for name, phone number, and email, allowing blank entries to keep current values
 
@@ -204,11 +204,11 @@ Purpose: Deletes a customer record from the database.
 
 Workflow:
 
- -Prompts for the customer ID to delete and retrieves the corresponding customer
+ -prompts for the customer ID to delete and retrieves the corresponding customer
 
  -If the customer exists, it deletes the record, commits changes, and confirms the deletion
 
- -Displays an error message if the customer is not found
+ -displays an error message if the customer is not found
 
 
 
